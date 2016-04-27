@@ -10,6 +10,7 @@ import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
 
 public class Controller {
     public static void main(String[] args) throws Exception {
+    	
 //    	System.out.println("https://movie.douban.com/subject/25881781/?tag=".matches("https://movie.douban.com/subject/\\d+/\\?.*"));
     	
         String crawlStorageFolder = "/home/jet/crawlerResult";
@@ -40,5 +41,6 @@ public class Controller {
          * will reach the line after this only when crawling is finished.
          */
         controller.start(DoubanCrawler.class, numberOfCrawlers);
+        System.out.println(DoubanCrawler.c);
     }
 }

@@ -7,7 +7,7 @@ package com.jetbaba.entity;
  * 豆瓣电影实体 包含电影相关的所有信息
  *
  */
-public class DoubanMovie {
+public class DoubanMovie implements StoredEntity{
 	/**
 	 * 影片id
 	 */
@@ -118,6 +118,15 @@ public class DoubanMovie {
 
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return "DoubanMovie [id=" + id + ", title=" + title + ", rating=" + rating + ", contries=" + contries
+				+ ", year=" + year + ", viewdNumber=" + viewdNumber + ", wishedNumber=" + wishedNumber + ", smallPic="
+				+ smallPic + ", url=" + url + "]";
 	}
 
 	/**
