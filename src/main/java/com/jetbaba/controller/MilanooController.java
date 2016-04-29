@@ -9,12 +9,17 @@ import java.util.Map;
 import com.jetbaba.fetcher.MilanooCrawler;
 import com.jetbaba.utils.StringUtils;
 
+/**
+ * 
+ * @author jet
+ * 米兰爬虫控制器
+ */
 public class MilanooController extends BaseController {
 	
 	/**
 	 * visitedMap在磁盘的位置
 	 */
-	public static String VISITED_PATH = "output/map.txt";
+	public static String VISITED_PATH = "output/map_milanoo.txt";
 	/**
 	 * 访问过的链接存储器 配置文件中如果milanoo.ifloadvisited=1，则要调用方法读取.否则开启全新到爬虫
 	 */

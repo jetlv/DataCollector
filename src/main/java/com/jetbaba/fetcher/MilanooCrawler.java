@@ -61,9 +61,17 @@ public class MilanooCrawler extends WebCrawler {
 		Integer code = Integer.valueOf(page.getStatusCode());
 		String url = page.getWebURL().getURL();
 
-		if (code >= 400) {
-			String toRecord = url + " : " + code;
-			fUtil.WriteFile(toRecord + "\r\n", "output/", "milanoo_result.txt", "utf-8");
+		String toRecord = url + " : " + code;
+		if (code >= 200 && code < 400) {
+			/**
+			 * 记录正常的URL
+			 */
+			fUtil.WriteFile(toRecord + "\r\n", "output/", "milanoo_normal_url.txt", "utf-8");
+		} else {
+			/**
+			 * 记录错误的URL
+			 */
+			fUtil.WriteFile(toRecord + "\r\n", "output/", "milanoo_bad_url.txt", "utf-8");
 			System.out.println(toRecord);
 		}
 	}
