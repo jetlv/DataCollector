@@ -1,13 +1,14 @@
 package Milanoo.DataCollector;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.jetbaba.utils.HttpRequest;
 
 public class DemoGen {
-	public static void main(String[] args) {
+	public static void dd(String[] args) {
 		String userAgent = "Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7";
 		// String url =
 		// HttpRequest.get("https://www.facebook.com").trustAllHosts().userAgent(userAgent).followRedirects(true).url().toString();
@@ -44,5 +45,13 @@ public class DemoGen {
 			}
 		}
 	}
-
+	
+	public static void main(String[] args) {
+		Map map = new HashMap();
+		map.put("productId", 92546);
+		map.put("tts", 1484749939);
+		map.put("id", 20751);
+		String body = HttpRequest.post("http://www.renault-trucks.net/J47MAP/web/getEtab.do?").form(map).body();
+		System.out.println(body);
+	}
 }

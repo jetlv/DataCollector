@@ -40,7 +40,7 @@
 			<version>4.2</version>
 		</dependency>
 		<!-- crawler4j 结束 -->
-		
+
 		<!-- jsonpath 开始 -->
 		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
@@ -48,7 +48,7 @@
 			<version>2.1.0</version>
 		</dependency>
 		<!-- jsonpath 结束 -->
-		
+
 		<!-- excel開始 -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -76,20 +76,29 @@
 			<version>1.7.5</version>
 		</dependency>
 		<!-- excel結束 -->
+
+		<!-- java pdf begin -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>2.0.2</version>
+		</dependency>
 		
+		<!-- java pdf end -->
+
 	</dependencies>
-	
+
 	<build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
