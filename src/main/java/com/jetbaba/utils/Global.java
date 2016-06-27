@@ -18,6 +18,10 @@ import com.jayway.jsonpath.JsonPath;
  */
 public class Global {
 	
+//	public static void main(String[] args) {
+//		 Global.class.getclass
+//	}
+//	
 	/**
 	 * 
 	 * @param key
@@ -28,7 +32,7 @@ public class Global {
 	public static String getValueByKey(String key) {
 		Properties p = new Properties();
 		
-		InputStream is = Object.class.getResourceAsStream("/configuration.properties");
+		InputStream is = Global.class.getResourceAsStream("/configuration.properties");
 		
 		try {
 			p.load(is);
@@ -42,7 +46,7 @@ public class Global {
 		}
 	}
 	
-	public static void main(String[] args) {
+//	public static void main(String[] args) {
 //		System.out.println(Global.getValueByKey("doubanmovie.year"));
 //		Pattern p = Pattern.compile("subject/(\\d+)/");
 //		Matcher m = p.matcher("https://movie.douban.com/subject/2174535/?from=subject-page");
@@ -57,13 +61,13 @@ public class Global {
 		/**
 		 * 使用jsonPath解析并对比
 		 */
-		String jpForScore = "$.rating.average";
-		Double mScore = JsonPath.read(jsonResultBody, jpForScore);
-		String jpForYear = "$.year";
-		String mYear = JsonPath.read(jsonResultBody, jpForYear);
-		String jpForCountry = "$.countries";
-		String mCountries = JsonPath.read(jsonResultBody, jpForCountry).toString();
-		
-		System.out.println(mScore + " "  + mYear + " " + mCountries);
-	}
+//		String jpForScore = "$.rating.average";
+//		Double mScore = JsonPath.read(jsonResultBody, jpForScore);
+//		String jpForYear = "$.year";
+//		String mYear = JsonPath.read(jsonResultBody, jpForYear);
+//		String jpForCountry = "$.countries";
+//		String mCountries = JsonPath.read(jsonResultBody, jpForCountry).toString();
+//		
+//		System.out.println(mScore + " "  + mYear + " " + mCountries);
+//	}
 }
