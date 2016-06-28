@@ -1,4 +1,4 @@
-package com.milanoo.triggers;
+package com.jetbaba.triggers;
 
 public class GoogleTrigger {
 

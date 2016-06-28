@@ -13,10 +13,10 @@ import com.jetbaba.controller.DoubanController;
 import com.jetbaba.controller.MilanooController;
 import com.jetbaba.controller.TesterHomeController;
 import com.jetbaba.fetcher.DoubanCrawler;
+import com.jetbaba.triggers.Trigger;
 import com.jetbaba.utils.FileUtil;
 import com.jetbaba.utils.Global;
 import com.jetbaba.utils.StringUtils;
-import com.milanoo.triggers.Trigger;
 
 /**
  * 
